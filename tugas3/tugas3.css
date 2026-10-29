@@ -1,0 +1,192 @@
+/* Pengaturan dasar halaman */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+h1, h2, p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Header dan Navbar (Flexbox) */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #bfdbfe;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #bfdbfe;
+}
+
+
+/* Footer (Flexbox) */
+footer {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+/* Bagian portofolio (CSS Grid) */
+#portofolio {
+    padding: 40px 5%;
+}
+
+#portofolio h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.kartu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.kartu {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.kartu h3 {
+    color: #1e3a8a;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.kartu p {
+    color: #475569;
+}
+
+.kartu a {
+    display: inline-block;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.kartu a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+
+/* Bagian kata-kata dan tentang saya */
+#kata-kata,
+aside {
+    padding: 0 5% 40px;
+}
+
+#kata-kata h2,
+aside h2 {
+    margin-bottom: 12px;
+}
+
+
+/* Responsive untuk tablet dan HP */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    #portofolio {
+        padding: 30px 4%;
+    }
+
+    #kata-kata,
+    aside {
+        padding: 0 4% 30px;
+    }
+
+    .kartu-container {
+        gap: 16px;
+    }
+}
+
+/* Responsive untuk HP kecil */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 19px;
+    }
+
+    .kartu {
+        padding: 18px;
+    }
+
+    #portofolio {
+        padding: 24px 16px;
+    }
+
+    #kata-kata,
+    aside {
+        padding: 0 16px 24px;
+    }
+}
