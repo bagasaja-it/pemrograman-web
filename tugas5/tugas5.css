@@ -1,0 +1,208 @@
+/* Daftar variabel warna yang saya gunakan */
+:root {
+    --warna-teks: #000000;
+    --warna-redup: #708090;
+    --warna-aksen: #2F4F4F;
+    --warna-latar: #000000;
+    --warna-garis: #dde3e3;
+    --warna-salah: #b42318;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Supaya atribut hidden selalu menyembunyikan elemen */
+[hidden] {
+    display: none !important;
+}
+
+/* Disembunyikan dari tampilan */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+    line-height: 1.6;
+}
+
+
+/* Kartu utama */
+main {
+    width: 90%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 96px 0 40px; /* Ruang di atas logo yang menumpuk */
+}
+
+.kartu-utama {
+    background-color: white;
+    border: 1px solid var(--warna-garis);
+    border-radius: 12px;
+    padding: 0 28px 32px;
+}
+
+/* Logo bulat yang menumpuk di tepi kartu bagian atas */
+.logo {
+    width: 104px;
+    height: 104px;
+    margin: -52px auto 28px; /* Angka minus = naik setengah ke atas tepi kartu */
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid var(--warna-garis);
+    color: var(--warna-teks);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Search bar: input di kiri, tombol kaca pembesar di kanan (Flexbox) */
+.pencarian {
+    display: flex;
+    border: 1px solid var(--warna-garis);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.pencarian:focus-within {
+    border-color: var(--warna-aksen);
+    box-shadow: 0 0 0 2px var(--warna-aksen); /* Mengubah warna garis tepi sekaligus memberi efek bayangan saat user mengklik search bar */
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--warna-teks);
+    border: none;
+    background: transparent;
+}
+
+input:focus {
+    outline: none; /* Buat menghilangkan garis tepi bawaan ketika user mengklik search bar */
+}
+
+button {
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--warna-aksen);
+    border: none;
+    border-left: 1px solid var(--warna-garis);
+    cursor: pointer;
+}
+
+/* Memberikan efek transparansi saat tombol disentuh kursor */
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Tampilan hasil pencarian */
+#hasil {
+    margin-top: 24px;
+}
+
+#loading {
+    margin: 0;
+    text-align: center;
+    color: var(--warna-redup);
+}
+
+#pesan {
+    margin: 0;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--warna-salah);
+    color: var(--warna-salah);
+    text-align: center;
+}
+
+#profil {
+    padding-top: 24px;
+    border-top: 1px solid var(--warna-garis);
+    text-align: center;
+}
+
+#avatar {
+    border-radius: 50%;
+    border: 3px solid var(--warna-aksen);
+    margin-bottom: 12px;
+}
+
+#nama {
+    font-size: 22px;
+    margin: 0;
+}
+
+#login {
+    color: var(--warna-redup);
+    margin: 0 0 12px;
+}
+
+#bio {
+    margin: 0 0 12px;
+}
+
+#profil a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--warna-aksen);
+    font-weight: bold;
+}
+
+#profil a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    width: 90%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 16px 0 32px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--warna-garis);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: var(--warna-aksen);
+}
+
+
+/* HP kecil */
+@media (max-width: 375px) {
+    .kartu-utama {
+        padding: 0 18px 24px;
+    }
+}
