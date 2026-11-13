@@ -1,0 +1,63 @@
+
+:root {
+  /* Palet Warna Tema Blue Library */
+  --text: #475569;
+  --text-h: #1e3a8a;
+  --bg: #eff6ff;
+  --surface: #ffffff;
+  --surface-warm: #f8faff;
+  --border: #bfdbfe;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-gold: #93c5fd;
+  --shadow: 0 4px 12px rgba(30, 64, 175, 0.08);
+
+  --sans: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --heading: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/1.6 var(--sans);
+  color: var(--text);
+  background-color: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset dasar */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Pengaturan aplikasi */
+#app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografi */
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+  margin-top: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
