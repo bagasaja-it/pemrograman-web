@@ -45,7 +45,7 @@ function tambahBuku() {
   <div class="page-wrapper">
     <main class="container">
       <header>
-        <h1>Perpustakaan BukuMu</h1>
+        <h1>Folder BukuMu</h1>
         <p>selesaikan wishlist membaca bukumu.</p>
       </header>
 
